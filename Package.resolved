@@ -1,0 +1,95 @@
+{
+  "pins" : [
+    {
+      "identity" : "openattributegraph",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/OpenSwiftUIProject/OpenAttributeGraph",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e3898e61195fa49f569a5a59c050fb8cbbb311f6"
+      }
+    },
+    {
+      "identity" : "opencombine",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/OpenSwiftUIProject/OpenCombine.git",
+      "state" : {
+        "revision" : "63aef318cb3a853bcb8d774cce15f4dcb1ccdfe4",
+        "version" : "0.15.1"
+      }
+    },
+    {
+      "identity" : "opencoregraphics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/OpenSwiftUIProject/OpenCoreGraphics",
+      "state" : {
+        "branch" : "main",
+        "revision" : "1a1b9ad092ed373a3c94df7b589e3e099da93699"
+      }
+    },
+    {
+      "identity" : "openobservation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/OpenSwiftUIProject/OpenObservation",
+      "state" : {
+        "branch" : "main",
+        "revision" : "1dd8b16a539e3563e05b77749acf334a4857a6a7"
+      }
+    },
+    {
+      "identity" : "openrenderbox",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/OpenSwiftUIProject/OpenRenderBox",
+      "state" : {
+        "branch" : "main",
+        "revision" : "7c8778e3dc42e3a41d0a85134ba384bd30fa3936"
+      }
+    },
+    {
+      "identity" : "openswiftui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/OpenSwiftUIProject/OpenSwiftUI.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "0af53c93876d5a76d5454cfe40c6d4a9cf171f34"
+      }
+    },
+    {
+      "identity" : "swift-asn1",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-asn1.git",
+      "state" : {
+        "revision" : "f70225981241859eb4aa1a18a75531d26637c8cc",
+        "version" : "1.4.0"
+      }
+    },
+    {
+      "identity" : "swift-crypto",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-crypto.git",
+      "state" : {
+        "revision" : "d1c6b70f7c5f19fb0b8750cb8dcdf2ea6e2d8c34",
+        "version" : "3.15.0"
+      }
+    },
+    {
+      "identity" : "swift-log",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-log",
+      "state" : {
+        "revision" : "ce592ae52f982c847a4efc0dd881cc9eb32d29f2",
+        "version" : "1.6.4"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-syntax",
+      "state" : {
+        "revision" : "f99ae8aa18f0cf0d53481901f88a0991dc3bd4a2",
+        "version" : "601.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}
