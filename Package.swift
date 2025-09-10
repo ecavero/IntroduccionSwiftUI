@@ -4,38 +4,52 @@ import PackageDescription
 let package = Package(
     name: "IntroduccionSwiftUI",
     platforms: [
-        .macOS(.v13), .iOS(.v16) // adjust to your project
+        .macOS(.v13),
+        .iOS(.v16)
     ],
     products: [
         .executable(
             name: "IntroduccionSwiftUI",
             targets: ["IntroduccionSwiftUI"]
-        ),
+        )
     ],
     dependencies: [
-        // Pull in OpenSwiftUI only for Linux
-        .package(url: "https://github.com/OpenSwiftUIProject/OpenSwiftUI.git", from: "0.8.0")
+        // No external deps needed since we’re using our own stubs
     ],
     targets: [
-        // Your app target
+        // Main app
         .executableTarget(
             name: "IntroduccionSwiftUI",
             dependencies: [
-                "SwiftUI" // depend on fake SwiftUI module
+                "SwiftUI", // always depend on SwiftUI
+                "SwiftData"
+            ],
+            path: "Sources/IntroduccionSwiftUI",
+            resources: [
+                // Handle your asset catalogs so SwiftPM ignores the warnings
+                .process("Assets.xcassets"),
+                .process("Preview Content/Preview Assets.xcassets")
             ]
         ),
-        // Fake SwiftUI module target
+
+        // Stub SwiftUI target (used only on Linux)
         .target(
             name: "SwiftUI",
-            dependencies: [
-                .product(name: "OpenSwiftUI", package: "OpenSwiftUI")
-            ],
+            dependencies: [],
             path: "Sources/SwiftUI"
         ),
+
+        .target(
+            name: "SwiftData",
+            dependencies: [],
+            path: "Sources/SwiftData"
+        ),
+
         // Tests
         .testTarget(
             name: "IntroduccionSwiftUITests",
-            dependencies: ["IntroduccionSwiftUI"]
+            dependencies: ["IntroduccionSwiftUI"],
+            path: "Sources/IntroduccionSwiftUITests"
         )
     ]
 )

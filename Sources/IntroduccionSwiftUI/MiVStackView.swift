@@ -10,7 +10,7 @@ import SwiftUI
 struct MiVStackView: View {
     var body: some View {
         VStack() {
-            Text("Isil")
+            Text("Isil")            
             Text("World")
                 .font(.system(size: 24,
                               weight: .ultraLight)
