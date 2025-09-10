@@ -4,30 +4,38 @@ import PackageDescription
 let package = Package(
     name: "IntroduccionSwiftUI",
     platforms: [
-        .macOS(.v13) // o la versión mínima que quieras
+        .macOS(.v13), .iOS(.v16) // adjust to your project
     ],
     products: [
-        .library(
+        .executable(
             name: "IntroduccionSwiftUI",
             targets: ["IntroduccionSwiftUI"]
         ),
     ],
     dependencies: [
-        // Stubs de SwiftUI para Linux
-        .package(url: "https://github.com/OpenSwiftUIProject/OpenSwiftUI.git", branch: "main"),
+        // Pull in OpenSwiftUI only for Linux
+        .package(url: "https://github.com/OpenSwiftUIProject/OpenSwiftUI.git", from: "0.8.0")
     ],
     targets: [
-        .target(
+        // Your app target
+        .executableTarget(
             name: "IntroduccionSwiftUI",
             dependencies: [
-                "OpenSwiftUI"
-            ],
-            path: "Sources/IntroduccionSwiftUI"
+                "SwiftUI" // depend on fake SwiftUI module
+            ]
         ),
+        // Fake SwiftUI module target
+        .target(
+            name: "SwiftUI",
+            dependencies: [
+                .product(name: "OpenSwiftUI", package: "OpenSwiftUI")
+            ],
+            path: "Sources/SwiftUI"
+        ),
+        // Tests
         .testTarget(
             name: "IntroduccionSwiftUITests",
-            dependencies: ["IntroduccionSwiftUI"],
-            path: "Sources/IntroduccionSwiftUITests"
-        ),
+            dependencies: ["IntroduccionSwiftUI"]
+        )
     ]
 )
