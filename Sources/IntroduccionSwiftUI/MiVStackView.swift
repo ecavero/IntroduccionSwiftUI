@@ -11,7 +11,7 @@ struct MiVStackView: View {
     var body: some View {
         VStack() {
             Text("Isil")
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Text("World")
                 .font(.system(size: 24,
                               weight: .ultraLight)
                 )
